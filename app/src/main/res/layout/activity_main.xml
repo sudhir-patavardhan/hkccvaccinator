@@ -7,11 +7,11 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/txtDOB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="135dp"
+        android:layout_marginTop="100dp"
         android:ems="10"
         android:hint="Date of Birth"
         android:inputType="date"
@@ -19,12 +19,24 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/VaccinateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="12dp"
         android:onClick="vaccinate"
         android:text="Vaccinate"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="191dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDOB" />
+
+    <LinearLayout
+        android:id="@+id/vaccineTable"
+        android:layout_width="296dp"
+        android:layout_height="490dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/VaccinateButton"></LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
